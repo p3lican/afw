@@ -1,25 +1,9 @@
 {
   "sitename": "AFW",
-  "sitedescription": "AFW UHHH",
+  "sitedescription": "Code & Garden Show, well, just ramblings...",
   "siteicon": "/images/uploads/afw-icon-50x50.png",
-  "showmenu": true,
-  "emailsignup": true,
-  "altlayout": true,
-  "menu": [
-    {
-      "name": "jake101",
-      "position": "1",
-      "link": "https://www.jake101.com/"
-    },
-    {
-      "name": "Nuxt.js",
-      "position": "2",
-      "link": "https://www.nuxtjs.org/"
-    },
-    {
-      "name": "Netlify",
-      "position": "3",
-      "link": "https://www.netlify.com/"
-    }
-  ]
+  "showmenu": false,
+  "emailsignup": false,
+  "altlayout": false,
+  "menu": []
 }
