@@ -1,9 +1,15 @@
 {
-  "sitename": "AFW",
-  "sitedescription": "Code & Garden Show, well, just ramblings...",
-  "siteicon": "/images/uploads/afw-icon-50x50.png",
-  "showmenu": false,
+  "sitename": "CodeVeg",
+  "sitedescription": "The latest on things happening everywhere!",
+  "siteicon": "/images/uploads/code-veg-logo-1080x1080.png",
+  "showmenu": true,
   "emailsignup": false,
-  "altlayout": false,
-  "menu": []
+  "altlayout": true,
+  "menu": [
+    {
+      "name": "First Menu Link",
+      "position": "1",
+      "link": "www.pelicans.com"
+    }
+  ]
 }
