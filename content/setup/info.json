@@ -4,7 +4,7 @@
   "siteicon": "/images/uploads/code-veg-logo-1080x1080.png",
   "showmenu": true,
   "emailsignup": false,
-  "altlayout": true,
+  "altlayout": false,
   "menu": [
     {
       "name": "First Menu Link",
