@@ -3,23 +3,27 @@
  
 
 <div class="xs-flex xs-flex-justify-space-around xs-flex-wrap blog-wrapper clearfix col lg-col-9 md-col-8 sm-col-7">
+
       <article v-if="items2[pi]" v-for="(p,pi) in items2" :key="p.pi" class="xs-border xs-p2 col xs-col-6 xs-pr1 article-wrapper">
-        <div class="item xs-block xs-full-height xs-flex">
-          <div class="article-info">
-          <h2><nuxt-link class="" :to="p._path">{{p.title}}</nuxt-link></h2>
-          <div class="article-meta"></div>
-          
 
-            <p v-html="$md.render(p.body)" v-if="pi < 1"></p>
+        <div class="item clearfix gutters">
 
+          <div class="article-info col lg-col-4 md-col-6 sm-col-12">
+            <h2 class="xs-text-1 md-text-2 lg-text-1 xs-mb2 slab"><nuxt-link :to="p._path">{{p.title}}</nuxt-link></h2>
+            <div class="article-meta"></div>
+            <p class="lg-text-4 md-text-4" v-if="pi < 1">{{p.teaser}}</p>
+
+            <nuxt-link :to="p._path" class="xs-block xs-text-2 xs-my2">Read More</nuxt-link>
           </div>
-          <nuxt-link class="xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center" :to="p._path">
-           
-            <img style="width:100%;max-width:300px;" v-if="p.thumbnail" :src="require('~/static'+p.thumbnail)"> 
-            
+
+          <nuxt-link class="xs-text-center col lg-col-8 md-col-6" :to="p._path">           
+            <img style="width:100%;" v-if="p.thumbnail" :src="require('~/static'+p.thumbnail)">             
           </nuxt-link>
+
         </div>
+
       </article>
+
 </div>
 
 <div class="sidebar-wrapper xs-flex-1 col lg-col-3 md-col-4 sm-col-5">Sidebar</div>
