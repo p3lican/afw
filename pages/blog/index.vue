@@ -171,7 +171,7 @@ export default {
     });
   },
   mounted() {
-    if (process.browser) {
+  //  if (process.browser) {
       this.loadMore();
 
       this.$nextTick(() => {
@@ -179,7 +179,7 @@ export default {
         this.pageCheck();
         window.addEventListener("resize", this.onResize);
       });
-    }
+   // }
   },
   beforeDestroy() {
     // Unregister the event listener before destroying this Vue instance
