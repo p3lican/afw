@@ -2,19 +2,27 @@
 <div class="xs-flex xs-flex-justify-space-around full-height browse" :style="`margin-top:${navbarheight}px`">
  
 
-<div class="xs-flex xs-flex-justify-space-around xs-flex-wrap blog-wrapper clearfix col md-col-9">
+<div class="xs-flex xs-flex-justify-space-around xs-flex-wrap blog-wrapper clearfix col lg-col-9 md-col-8 sm-col-7">
       <article v-if="items2[pi]" v-for="(p,pi) in items2" :key="p.pi" class="xs-border xs-p2 col xs-col-6 xs-pr1 article-wrapper">
         <div class="item xs-block xs-full-height xs-flex">
+          <div class="article-info">
+          <h2><nuxt-link class="" :to="p._path">{{p.title}}</nuxt-link></h2>
+          <div class="article-meta"></div>
+          
+
+            <p v-html="$md.render(p.body)" v-if="pi < 1"></p>
+
+          </div>
           <nuxt-link class="xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center" :to="p._path">
            
             <img style="width:100%;max-width:300px;" v-if="p.thumbnail" :src="require('~/static'+p.thumbnail)"> 
-            <h2>{{p.title}}</h2>
+            
           </nuxt-link>
         </div>
       </article>
 </div>
 
-<div class="sidebar-wrapper xs-flex-1 col md-col-3">Sidebar</div>
+<div class="sidebar-wrapper xs-flex-1 col lg-col-3 md-col-4 sm-col-5">Sidebar</div>
 
 
 
@@ -26,6 +34,9 @@
 </div>
 </template>
 <script>
+
+  import MdWrapper from "~/components/MdWrapper";
+
 export default {
   props: [],
   data() {
@@ -145,7 +156,9 @@ export default {
       }
     }
   },
-
+  components: {
+    MdWrapper
+  },
   updated() {
     this.$nextTick(() => {
       this.pageCheck();
