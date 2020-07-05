@@ -18,7 +18,13 @@
         <div class="item">
           <nuxt-link to="/" exact>Home</nuxt-link>
           <span v-show="crumb"> &nbsp;
-            <span class="text-gray-lightest"> > </span> &nbsp; {{thecrumb}} </span> &nbsp;
+            <span class="text-gray-lightest"> > </span> &nbsp; 
+
+          <nuxt-link v-if="crumb=='Categories'" to="/categories">{{thecrumb}}</nuxt-link>
+          <span v-else>{{thecrumb}}</span>
+
+
+        </span> &nbsp;
           <span class="text-gray-lightest"> > </span> &nbsp; {{blogtitle}}
         </div>
       </div>
