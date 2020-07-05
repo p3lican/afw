@@ -17,7 +17,7 @@
           </div>
 
           <nuxt-link class="xs-text-center col lg-col-8 md-col-6" :to="p._path">           
-            <img v-lazy="p.thumbnail" :key="p.thumbnail" style="width:100%;" v-if="p.thumbnail" :src="require('~/static'+p.thumbnail)">             
+            <img v-lazy="p.thumbnail" :key="p.thumbnail" style="width:100%;" v-if="p.thumbnail" :alt="p.title" :src="require('~/static'+p.thumbnail)">             
           </nuxt-link>
 
         </div>

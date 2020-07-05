@@ -112,7 +112,7 @@ nav {
   right: 0;
 }
 .sitename {
-  color: #39b54a;
+  color: #006337;
   font-family: "Archivo Black", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
