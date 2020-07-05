@@ -21,6 +21,7 @@
             <span class="text-gray-lightest"> > </span> &nbsp; 
 
           <nuxt-link v-if="crumb=='Categories'" to="/categories">{{thecrumb}}</nuxt-link>
+          <nuxt-link v-else-if="crumb=='Blog'" to="/blog">{{thecrumb}}</nuxt-link>
           <span v-else>{{thecrumb}}</span>
 
 
@@ -97,6 +98,7 @@ export default {
   padding-left: 0;
   transform: translateY(17px);
   width: 30vw;
+  z-index: 99;
 }
 .results li {
   list-style-type: none;
@@ -110,11 +112,16 @@ nav {
   right: 0;
 }
 .sitename {
-  color: #000;
+  color: #39b54a;
   font-family: "Archivo Black", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 18px;
+  transition-duration:280ms;
+}
+.sitename:hover {
+  color: #39d64a;
+  transition-duration:280ms;
 }
 @media only screen and (max-width: 40rem) {
   .results {

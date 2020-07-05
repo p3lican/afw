@@ -67,6 +67,14 @@ return this.$store.state.pagination
 
 
 <style>
+
+
+a {
+    color: #006337;
+}
+a:hover {
+color:#39b54a;
+}
 html,
 body {
   -moz-osx-font-smoothing: grayscale;
